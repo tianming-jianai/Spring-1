@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 配置Bean -->
+	<!-- class:全类名, 通过反射的 方式在IOC，容器中创建Bean，所以要求bean中必须有无参的构造器  -->
+	<bean id="hello2" class="com.atguigu.spring.beans.Helloworld">
+		<property name="name" value="Spring"></property>
+	</bean>
+	
+	<!-- 通过构造器注入 -->
+	<!-- 使用构造器注入属性值，可以指定参数的位置和参数的类型！以区分重载的构造器！ -->
+	<bean id="car" class="com.atguigu.spring.beans.Car">
+		<constructor-arg value="Audi" index="0"></constructor-arg>
+		<constructor-arg value="shanghai" index="1"></constructor-arg>
+		<constructor-arg value="100000" index="2"></constructor-arg>
+	</bean>
+	
+	<bean id="car2" class="com.atguigu.spring.beans.Car">
+		<constructor-arg value="BMW" index="0"></constructor-arg>
+		<!-- 如果字面值包含特殊字符，可以使用<![CDATA[]]>包裹起来 -->
+		<!-- 属性值也可以使用value直接进行配置 -->
+		<constructor-arg>
+			<value><![CDATA[<shanghai^>]]></value>
+		</constructor-arg>
+		<constructor-arg value="50.0" type="double"></constructor-arg>
+	</bean>
+	
+	
+	<bean id="person" class="com.atguigu.spring.beans.Person">
+		<property name="name" value="Tom"></property>
+		<property name="age" value="12"></property>
+		<!-- 
+		<property name="car" ref="car2"></property>
+		 -->
+		 <!-- 
+		<property name="car">
+			<ref bean="car2"/>
+		</property>
+		 -->
+		<property name="car">
+			<!-- 内部bean，不能被外部引用，只能内部使用 -->
+			<bean id="car3" class="com.atguigu.spring.beans.Car">
+				<constructor-arg value="Ford" />
+				<constructor-arg value="Changan" />
+				<constructor-arg value="20000" type="double" />				
+			</bean>
+		</property>
+		<property name="car.price" value="30"></property>
+	</bean>
+	
+	<bean name="person2" class="com.atguigu.spring.beans.Person">
+		<constructor-arg value="Jerry" />
+		<constructor-arg value="22" />
+		<!-- 
+		<constructor-arg ref="car2" />
+		 -->
+		 <!-- 测试赋值null,null值的专有标记 -->
+		 <!-- 
+		<constructor-arg><null/></constructor-arg>
+		 -->
+		<!-- 为级联属性赋值 -->
+		<constructor-arg ref="car2" />
+		<property name="car.price" value="20000"></property>
+	</bean>
+</beans>
