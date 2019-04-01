@@ -5,6 +5,15 @@ public class Car {
 	private String corp;
 	private int price;
 	private double maxSpeed;
+	
+	
+
+	public Car() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 
 	public Car(String brand, String corp, int price) {
 		super();
@@ -34,5 +43,15 @@ public class Car {
 		this.price = price;
 	}
 	
-
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	
+	public void setMaxSpeed(double maxSpeed) {
+		this.maxSpeed = maxSpeed;
+	}
+	
+	public void setCorp(String corp) {
+		this.corp = corp;
+	}
 }
