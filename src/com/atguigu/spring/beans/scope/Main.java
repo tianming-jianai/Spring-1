@@ -3,7 +3,7 @@ package com.atguigu.spring.beans.scope;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.atguigu.spring.beansautowire.Car;
+import com.atguigu.spring.beans.autowire.Car;
 
 
 

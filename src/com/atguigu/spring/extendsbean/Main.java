@@ -3,8 +3,8 @@ package com.atguigu.spring.extendsbean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.atguigu.spring.beansautowire.Address;
-import com.atguigu.spring.beansautowire.Person;
+import com.atguigu.spring.beans.autowire.Address;
+import com.atguigu.spring.beans.autowire.Person;
 
 public class Main {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.atguigu.spring.beansautowire;
+package com.atguigu.spring.beans.autowire;
 
 public class Car {
 	private String brand;

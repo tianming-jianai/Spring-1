@@ -22,4 +22,11 @@ public class Car {
 		System.out.println("destory ...");
 	}
 
+	@Override
+	public String toString() {
+		return "Car [brand=" + brand + "]";
+	}
+	
+	
+
 }

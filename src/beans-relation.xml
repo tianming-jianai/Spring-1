@@ -9,12 +9,12 @@
 	<bean id="address" p:city="Shanghai" p:street="Lujiazui" abstract="true"></bean>
 	
 	<!-- bean配置的继承：使用bean的 parent属性 指定继承那个bean的配置 -->
-	<bean id="address2" class="com.atguigu.spring.beansautowire.Address" p:street="Fanrong" parent="address"></bean>
+	<bean id="address2" class="com.atguigu.spring.beans.autowire.Address" p:street="Fanrong" parent="address"></bean>
 	
-	<bean id="address3" class="com.atguigu.spring.beansautowire.Address" p:street="YiTian" parent="address2"></bean>
+	<bean id="address3" class="com.atguigu.spring.beans.autowire.Address" p:street="YiTian" parent="address2"></bean>
 	
 	
-	<bean id="car" class="com.atguigu.spring.beansautowire.Car" p:brand="Audi" p:price="300000"></bean>
+	<bean id="car" class="com.atguigu.spring.beans.autowire.Car" p:brand="Audi" p:price="300000"></bean>
 	<!-- 要求再配置Person时，必须有一个关联的Car！ 换句话说person这个bean依赖于Car这个bean -->
-	<bean id="person" class="com.atguigu.spring.beansautowire.Person" p:name="Tom" p:address-ref="address2" depends-on="car"></bean>
+	<bean id="person" class="com.atguigu.spring.beans.autowire.Person" p:name="Tom" p:address-ref="address2" depends-on="car"></bean>
 </beans>
