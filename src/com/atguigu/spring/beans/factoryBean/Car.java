@@ -1,4 +1,4 @@
-package com.atguigu.spring.beans.factory;
+package com.atguigu.spring.beans.factoryBean;
 
 public class Car {
 	private String brand;
