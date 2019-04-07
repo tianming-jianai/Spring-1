@@ -69,7 +69,7 @@
 	</bean>
 	
 	<!-- 测试如何配置集合属性 -->
-	<bean id="person3" class="com.atguigu.spring.beanscollections.Person">
+	<bean id="person3" class="com.atguigu.spring.beans.collections.Person">
 		<property name="name" value="Jobs" />
 		<property name="age" value="45" />
 		<property name="cars">
@@ -85,7 +85,7 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="person4" class="com.atguigu.spring.beanscollections.NewPerson">
+	<bean id="person4" class="com.atguigu.spring.beans.collections.NewPerson">
 		<property name="name" value="Jobs" />
 		<property name="age" value="45" />
 		<property name="cars">
@@ -106,7 +106,7 @@
 	</bean>
 	
 	<!-- 配置Properties属性值 -->
-	<bean id="dataSource" class="com.atguigu.spring.beanscollections.DataSource">
+	<bean id="dataSource" class="com.atguigu.spring.beans.collections.DataSource">
 		<!-- 使用props和prop子节点来为properties属性赋值 -->
 		<property name="properties">
 			<props>
@@ -124,12 +124,12 @@
 		<ref bean="car2" />
 	</util:list>
 	
-	<bean id="person5" class="com.atguigu.spring.beanscollections.Person">
+	<bean id="person5" class="com.atguigu.spring.beans.collections.Person">
 		<property name="name" value="Jack"></property>
 		<property name="age" value="29"></property>
 		<property name="cars" ref="cars"></property>
 	</bean>
 	
 	<!-- 通过p命名空间为bean的属性赋值，需要先导入p命名空间，相对于传统的范式更加简洁 -->
-	<bean id="person6" class="com.atguigu.spring.beanscollections.Person" p:name="Queen" p:age="18" p:cars-ref="cars"></bean>
+	<bean id="person6" class="com.atguigu.spring.beans.collections.Person" p:name="Queen" p:age="18" p:cars-ref="cars"></bean>
 </beans>

@@ -1,4 +1,4 @@
-package com.atguigu.spring.extendsbean;
+package com.atguigu.spring.beans.abstractBean;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -3,9 +3,9 @@ package com.atguigu.spring.beans;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.atguigu.spring.beanscollections.DataSource;
-import com.atguigu.spring.beanscollections.NewPerson;
-import com.atguigu.spring.beanscollections.Person;
+import com.atguigu.spring.beans.collections.DataSource;
+import com.atguigu.spring.beans.collections.NewPerson;
+import com.atguigu.spring.beans.collections.Person;
 
 public class Main2 {
 
